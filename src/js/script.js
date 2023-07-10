@@ -32,9 +32,43 @@ photos.forEach((photo, index) => {
 	// });
 });
 
+const showNextPhoto = () => {
+	if (currentPhoto === photos.length - 1) {
+		currentPhoto = 0;
+	} else {
+		currentPhoto++;
+	}
+	galleryPhoto.src = photos[currentPhoto].src;
+};
+
+const showPreviousPhoto = () => {
+	if (currentPhoto === 0) {
+		currentPhoto = photos.length - 1;
+	} else {
+		currentPhoto--;
+	}
+	galleryPhoto.src = photos[currentPhoto].src;
+};
+
 function closeGallery() {
 	galleryContainer.classList.toggle('hide-gallery');
 	console.log('dsg');
 }
 
+document.addEventListener('keydown', (e) => {
+	if (!galleryContainer.classList.contains('popup-hidden')) {
+		if (e.code === 'ArrowRight' || e.keyCode === 39 || e.key === 'ArrowRight') {
+			showNextPhoto();
+		}
+		if (e.code === 'ArrowLeft' || e.keyCode === 37 || e.key === 'ArrowLeft') {
+			showPreviousPhoto();
+		}
+		if (e.code === 'Escape' || e.keyCode === 27 || e.key === 'Escape') {
+			closeCurrentPhoto();
+		}
+	}
+});
+
 closePhotoBtn.addEventListener('click', closeGallery);
+nextPhotoBtn.addEventListener('click', showNextPhoto)
+prevPhotoBtn.addEventListener('click', showPreviousPhoto)
