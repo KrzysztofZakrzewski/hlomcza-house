@@ -6,7 +6,7 @@
 	padding: 0;
 }
 
-$main-green-bacground: rgb(37, 189, 37);
+$main-green-bacground: rgba(37, 189, 37, 1);
 $main-whithe: rgb(212, 212, 212);
 $letters-white: white;
 
@@ -71,7 +71,7 @@ main {
 	width: 50%;
 	height: 100%;
 	// border: 1px solid black;
-	z-index: 100;
+	z-index: 1000;
 }
 
 .img {
@@ -84,6 +84,7 @@ main {
 	border: 3px solid $main-whithe;
 	// border-radius: 5%;
 	cursor: pointer;
+
 }
 
 .two {
@@ -104,6 +105,7 @@ main {
 		font-size: 1em;
 		color: $letters-white;
 		text-align: left;
+		z-index: 111;
 	}
 }
 
@@ -174,6 +176,48 @@ main {
 	border-radius: 10%;
 	// z-index: -10;
 }
+
+.forest-holder {
+	position: absolute;
+	right: 0;
+	bottom: 50%;
+	width: 250px;
+	height: 120px;
+	// background-color: red;
+	// border: 1px solid red;
+	z-index: -10;
+	// rotate: -5deg;
+}
+
+.forest-holder::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+	background:linear-gradient(-7deg, rgba(37, 189, 37, 1) 32%, rgba(37, 189, 37, .5) 80%);
+	z-index: -10;
+}
+
+.forest {
+	position: absolute;
+	// right: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	// border: 1px solid black;
+	z-index: -10;
+}
+// .forest::after{
+// 	content: '';
+// 	position: absolute;
+// 	width: 100px;
+// 	height: 100px;
+// 	background-color: pink;
+// 	z-index: 110;
+// }
 
 .tilt-right {
 	right: -175px;
@@ -285,5 +329,8 @@ main {
 @media (min-width: 1024px) {
 	main {
 		width: 60%;
+	}
+	.wrapper {
+		overflow: visible;
 	}
 }
