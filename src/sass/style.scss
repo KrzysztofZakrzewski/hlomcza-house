@@ -56,8 +56,6 @@ main {
 	position: relative;
 	width: 100svw;
 	height: 100svh;
-	// position: relative;
-	// height: 100vh;
 	background-image: url('../../dist/images/outside-front-side.jpg');
 	background-position: center;
 	background-size: cover;
@@ -122,8 +120,6 @@ main {
 	height: auto;
 	transform: translate(-50%, -50%);
 	border: 3px solid $main-whithe;
-	// border-radius: 5%;
-	// z-index: 100;
 	cursor: pointer;
 }
 
@@ -141,8 +137,6 @@ main {
 
 	p {
 		margin-left: 10px;
-		// padding: auto;
-
 		font-size: 1em;
 		color: $letters-white;
 		text-align: left;
@@ -168,13 +162,9 @@ main {
 	justify-content: flex-start; /* Wyśrodkowanie względem osi Y */
 	align-items: center;
 	z-index: 100;
-	// align-self: center;
 
 	p {
-		// position: relative;
 		margin-left: 10px;
-		// padding: auto;
-
 		font-size: 1em;
 		color: $letters-white;
 		text-align: left;
@@ -199,7 +189,6 @@ main {
 	clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 	background-color: $main-green-bacground;
 	border-radius: 10%;
-	// z-index: -10;
 }
 
 .forest-holder-right {
@@ -208,10 +197,7 @@ main {
 	bottom: 50%;
 	width: 250px;
 	height: 120px;
-	// background-color: red;
-	// border: 1px solid red;
 	z-index: -10;
-	// rotate: -5deg;
 }
 
 .forest-holder-right::after {
@@ -227,17 +213,14 @@ main {
 		rgba(37, 189, 37, 1) 28%,
 		rgba(37, 189, 37, 0.5) 99%
 	);
-	// border: 1px solid black;
 	z-index: -10;
 }
 
 .forest-right {
 	position: absolute;
-	// right: 0;
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	// border: 1px solid black;
 	z-index: -100;
 }
 
@@ -250,7 +233,6 @@ main {
 	// background-color: red;
 	// border: 1px solid red;
 	z-index: -10;
-	// rotate: -5deg;
 }
 
 .forest-holder-left::after {
@@ -272,7 +254,7 @@ main {
 
 .forest-left {
 	position: absolute;
-	// right: 0;
+
 	bottom: 0;
 	width: 100%;
 	height: 100%;
@@ -280,22 +262,12 @@ main {
 	z-index: -10;
 }
 
-// .forest::after{
-// 	content: '';
-// 	position: absolute;
-// 	width: 100px;
-// 	height: 100px;
-// 	background-color: pink;
-// 	z-index: 110;
-// }
-
 .tilt-right {
 	right: -175px;
 }
 
 .tilt-left {
 	left: -175px;
-	// margin-right: 50px;
 }
 
 .tilt-shadow {
@@ -312,11 +284,9 @@ main {
 
 .tilt-shadow-left {
 	left: -160px;
-	// margin-right: 50px;
 }
 .tilt-shadow-right {
 	right: -165px;
-	// margin-right: 50px;
 }
 
 .gallery-container {
@@ -379,16 +349,13 @@ main {
 .prev__img--btn {
 	margin-right: auto;
 	transform: scaleX(-1);
-	// cursor: pointer;
 	z-index: 100;
 }
 .next__img--btn {
 	margin-left: auto;
-	// margin-bottom: auto;
 	z-index: 100;
 }
 .close__img--btn {
-	// margin-top: 10px;
 	margin-left: auto;
 }
 
@@ -409,7 +376,6 @@ main {
 		position: relative;
 		width: 100%;
 		height: 400px;
-		// border: 1px solid red;
 		display: flex;
 	}
 
@@ -421,7 +387,6 @@ main {
 		height: auto;
 		transform: translate(-50%, -50%);
 		border: 3px solid $main-whithe;
-		// border-radius: 5%;
 		z-index: 100;
 		cursor: pointer;
 	}
