@@ -21,17 +21,28 @@ body {
 }
 
 .navbar {
-	// position: fixed;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
 	display: flex;
 	text-transform: uppercase;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	background-color: rgba(211, 170, 142, 0.788);
+	background-color: $letters-white;
 	display: flex;
 	border: 1px solid blue;
+	z-index: 100;
+
 	.nav-link {
 		display: inline-block;
 		padding: 0 1rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
 	}
 }
 
@@ -41,11 +52,28 @@ main {
 	border: 1px solid red;
 }
 
-.header {
+.hero-img-header {
 	position: relative;
 	width: 100svw;
 	height: 100svh;
+	// position: relative;
+	// height: 100vh;
+	background-image: url('../../dist/images/outside-front-side.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: scroll;
+	overflow: hidden;
+	z-index: 0;
 	border: 1px solid black;
+}
+
+.hero-img-header::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.315);
+	z-index: -5;
 }
 
 .segment {
@@ -95,6 +123,7 @@ main {
 	transform: translate(-50%, -50%);
 	border: 3px solid $main-whithe;
 	// border-radius: 5%;
+	z-index: 100;
 	cursor: pointer;
 }
 
@@ -125,7 +154,7 @@ main {
 	width: 50%;
 	height: 100%;
 	// border: 1px solid black;
-	z-index: 100;
+	z-index: 500;
 }
 
 .two-left {
@@ -153,6 +182,7 @@ main {
 	position: absolute;
 	top: 45%;
 	left: 52%;
+	z-index: 100;
 }
 
 // .image-container {
@@ -224,7 +254,7 @@ main {
 	width: 100%;
 	height: 100%;
 	// border: 1px solid black;
-	z-index: -10;
+	z-index: -100;
 }
 
 .forest-holder-left {
